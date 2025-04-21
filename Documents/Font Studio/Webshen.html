@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Font – Design Studio Portfolio</title>
+  <link rel="stylesheet" href="Webstyle.css" />
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body>
+  <!-- Particle Background -->
+  <div id="particles-js"></div>
+
+  <!-- Content Wrapper -->
+  <div class="wrapper">
+    <div class="floating-btn">
+      <a href="#contact">Get in Touch</a>
+    </div>
+
+    <header class="hero fade-in">
+      <img src="WDF.jpg" alt="Font – Design Studio Logo" class="logo" />
+      <h1 class="brand-title">Font</h1>
+      <p class="brand-subtitle">Design Studio</p>
+    </header>
+
+    <main>
+      <section class="about fade-in">
+        <h2>About Us</h2>
+        <p>
+          Hey there! We are <strong>Font</strong> – a small creative design studio where minimalism meets clarity. 
+          We craft custom web experiences that feel simple, clean, and quietly powerful.
+        </p>
+        <p>
+          With a background in <strong>frontend development and visual design</strong>, we build digital spaces that work fast, look good, and feel intuitive.
+        </p>
+        <p>
+          Whether you're a solo creator or a growing brand, we help you show up online with style and sense.
+        </p>
+      </section>
+
+      <section class="services fade-in">
+        <h2>Services</h2>
+        <ul>
+          <li>Web Page Design – Portfolios, landing pages, single-pagers, business sites</li>
+          <li>App Frontend Design – Clean UI/UX for mobile & web apps</li>
+          <li>Responsive Builds – HTML, CSS, JS and SEO-friendly code</li>
+          <li>Creative Consults – Visual strategy for digital identity</li>
+        </ul>
+      </section>
+
+      <section class="contact fade-in" id="contact">
+        <h2>Contact</h2>
+        <p>Let’s build something cool & functional.</p>
+        <p>Email: <a href="mailto:websushen@gmail.com">websushen@gmail.com</a></p>
+        <p><small>Phone number available for serious inquiries only.</small></p>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 Font – Design Studio. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <!-- Fade-In Animation Script -->
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = {
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px"
+    };
+    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+    faders.forEach(fader => {
+      appearOnScroll.observe(fader);
+    });
+  </script>
+
+  <!-- Particles.js Config -->
+  <script>
+    particlesJS('particles-js', {
+      particles: {
+        number: {
+          value: 65,
+          density: { enable: true, value_area: 900 }
+        },
+        color: { value: "#4bd1c6" },
+        shape: { type: "circle" },
+        opacity: {
+          value: 0.35,
+          random: true
+        },
+        size: {
+          value: 2.5,
+          random: true
+        },
+        line_linked: {
+          enable: true,
+          distance: 140,
+          color: "#4bd1c6",
+          opacity: 0.2,
+          width: 1
+        },
+        move: {
+          enable: true,
+          speed: 1,
+          direction: "none",
+          out_mode: "out"
+        }
+      },
+      interactivity: {
+        events: {
+          onhover: { enable: true, mode: "grab" },
+          resize: true
+        },
+        modes: {
+          grab: {
+            distance: 180,
+            line_linked: { opacity: 0.35 }
+          }
+        }
+      },
+      retina_detect: true
+    });
+  </script>
+</body>
+</html>
