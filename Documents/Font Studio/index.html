@@ -3,65 +3,129 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Font – Design Studio Portfolio</title>
+  <title>Pola Events</title>
   <link rel="stylesheet" href="Webstyle.css" />
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <style>
+    /* Video Background Styling */
+    #bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      z-index: -3;
+      opacity: 0.55;
+    }
+
+    body, h1, h2, p, li, a {
+      color: #ffffff;
+      text-shadow: 0 2px 5px rgba(0,0,0,0.6);
+    }
+
+    .brand-title, .brand-subtitle {
+      color: #ffffff;
+    }
+
+    .insta-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .insta-link:hover {
+      color: #f5c518;
+    }
+
+    .floating-btn {
+      position: fixed;
+      top: 30px;
+      right: 20px;
+      z-index: 99;
+    }
+
+    .floating-btn a {
+      background: #FFFF33;
+      color: #000;
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: none;
+      transition: all 0.3s ease;
+    }
+
+    .floating-btn a:hover {
+      background: #f2e500;
+    }
+  </style>
 </head>
 <body>
-  <!-- Particle Background -->
+  <!-- 🎥 Video Background -->
+  <video id="bg-video" autoplay muted loop playsinline>
+    <source src="PolaBG.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- ✨ Particle Background -->
   <div id="particles-js"></div>
 
-  <!-- Content Wrapper -->
+  <!-- 🌟 Content Wrapper -->
   <div class="wrapper">
     <div class="floating-btn">
-      <a href="#contact">Get in Touch</a>
+      <a href="tel:812141178">📞 Get in Touch</a>
     </div>
 
     <header class="hero fade-in">
-      <img src="WDF.jpg" alt="Font – Design Studio Logo" class="logo" />
-      <h1 class="brand-title">Font</h1>
-      <p class="brand-subtitle">Design Studio</p>
+      <img src="Pola events logo.jpg" alt="Pola Logo" class="logo" />
+      <h1 class="brand-title">Pola Events</h1>
+      <p class="brand-subtitle">by vikas</p>
     </header>
 
     <main>
       <section class="about fade-in">
         <h2>About Us</h2>
         <p>
-          Hey there! We are <strong>Font</strong> – a small creative design studio where minimalism meets clarity. 
-          We craft custom web experiences that feel simple, clean, and quietly powerful.
+          Welcome to <strong>Pola Events</strong> – where celebrations are crafted with elegance and emotion. Based in Hyderabad, we specialize in turning your moments into lifelong memories.
         </p>
         <p>
-          With a background in <strong>frontend development and visual design</strong>, we build digital spaces that work fast, look good, and feel intuitive.
+          From vibrant <strong>mehendi nights</strong> to grand <strong>receptions</strong>, we blend traditional warmth with modern creativity to design events that feel personal, polished, and unforgettable.
         </p>
         <p>
-          Whether you're a solo creator or a growing brand, we help you show up online with style and sense.
+          With a team that’s as passionate as your vision, we handle every detail — décor, logistics, coordination, and mood — so you can simply enjoy the magic.
         </p>
       </section>
 
       <section class="services fade-in">
         <h2>Services</h2>
         <ul>
-          <li>Web Page Design – Portfolios, landing pages, single-pagers, business sites</li>
-          <li>App Frontend Design – Clean UI/UX for mobile & web apps</li>
-          <li>Responsive Builds – HTML, CSS, JS and SEO-friendly code</li>
-          <li>Creative Consults – Visual strategy for digital identity</li>
+          <li>Weddings </li><a href = "wed.html" target="_blank" class="Webpage 2">Know More</a>
+          <li>Theme Decor  </li><a href = "Theme.html" target="_blank" class="Webpage 2">Know More</a>
+          <li>Musical Events & DJ Nights</li><a href = "Dj.html" target="_blank" class="Webpage 2">Know More</a>
+          <li>Festive Celebrations </li><a href = "festive.html" target="_blank" class="Webpage 2">Know More</a>
+          <li>Private Parties – Get-togethers, Birthdays, Anniversaries</li>
         </ul>
       </section>
 
-      <section class="contact fade-in" id="contact">
-        <h2>Contact</h2>
-        <p>Let’s build something cool & functional.</p>
-        <p>Email: <a href="mailto:websushen@gmail.com">websushen@gmail.com</a></p>
-        <p><small>Phone number available for serious inquiries only.</small></p>
+      <section class="social fade-in">
+        <h2>Follow Us</h2>
+        <p>Catch the latest moments, behind-the-scenes, and event highlights on our Instagram.</p>
+        <a href="https://www.instagram.com/pola_events/" target="_blank" class="insta-link">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Icon" class="insta-icon" width="30" height="30" />
+          @pola_events
+        </a>
       </section>
     </main>
 
     <footer>
-      <p>© 2025 Font – Design Studio. All rights reserved.</p>
+      <p>© 2025 Created for <strong>Pola Events</strong> by <strong>Font– Design Studio.</strong> All rights reserved.</p>
     </footer>
   </div>
 
-  <!-- Fade-In Animation Script -->
+  <!-- 🌀 Fade-In Animation -->
   <script>
     const faders = document.querySelectorAll('.fade-in');
     const appearOptions = {
@@ -80,7 +144,7 @@
     });
   </script>
 
-  <!-- Particles.js Config -->
+  <!-- 🔷 Particles.js Config -->
   <script>
     particlesJS('particles-js', {
       particles: {

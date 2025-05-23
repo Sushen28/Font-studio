@@ -15,13 +15,13 @@ html, body {
   overflow-x: hidden;
 }
 
-/* Full-screen background for particles */
-#particles-js {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+/* Background image */
+#particles-js::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.1); /* play with opacity */
   z-index: -1;
   background-color: #0e2124;
 }
@@ -50,7 +50,7 @@ main {
   z-index: 1;
 }
 
-/* Hero */
+/* Hero Section */
 .hero {
   display: flex;
   align-items: center;
@@ -60,54 +60,46 @@ main {
   text-align: left;
 }
 
-
 .hero h1 {
   font-size: 3.5rem;
   font-weight: 800;
   margin-bottom: 10px;
-  color: #00e0ff;
+  color: #ffffff;
 }
+
 .brand-title {
   font-size: 4rem;
   font-weight: 800;
   margin: 0;
-  color: #00e0ff;
+  color: #ffffff;
   line-height: 1.2;
 }
+
 .brand-subtitle {
   font-size: 1.2rem;
   font-style: italic;
-  color: #ccc;
+  color: #dddddd;
   margin-top: 5px;
-}
-
-
-.tagline {
-  font-size: 1.2rem;
-  font-style: italic;
-  color: #ccc;
 }
 
 .logo {
   width: 100px;
   height: auto;
   border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0, 224, 255, 0.3);
-  animation: logoPop 0.9s ease-out forwards;
-  animation-delay: 2s;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
 }
 
-/* Sections */
+/* Section Styling */
 section {
   margin-bottom: 50px;
   padding-bottom: 20px;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 section h2 {
   font-size: 1.6rem;
   margin-bottom: 15px;
-  color: #ffffff;
+  color: #005551;
   position: relative;
 }
 
@@ -116,7 +108,7 @@ section h2::after {
   display: block;
   width: 40px;
   height: 3px;
-  background: #00e0ff;
+  background: #005551;
   margin-top: 5px;
   border-radius: 2px;
 }
@@ -124,7 +116,7 @@ section h2::after {
 section p,
 section ul {
   font-size: 1rem;
-  color: #cfcfcf;
+  color: #92ff33;
 }
 
 ul {
@@ -141,30 +133,30 @@ ul {
 }
 
 .floating-btn a {
-  background: #00e0ff;
+  background: #69ff33;
   color: #000;
   padding: 10px 20px;
   border-radius: 30px;
   font-weight: 600;
   text-decoration: none;
-  box-shadow: 0 4px 15px rgba(0, 224, 255, 0.3);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
   transition: all 0.3s ease;
 }
 
 .floating-btn a:hover {
-  background: #00b5cc;
+  background: #59f200;
 }
 
 /* Links */
 a {
-  color: #00e0ff;
+  color: #FFFF33;
   text-decoration: none;
   border-bottom: 1px dashed transparent;
   transition: all 0.3s ease;
 }
 
 a:hover {
-  border-bottom: 1px dashed #00e0ff;
+  border-bottom: 1px dashed #FFFF33;
   color: #ffffff;
 }
 
@@ -202,7 +194,6 @@ footer {
     padding: 8px 16px;
     font-size: 0.9rem;
   }
-  
 }
 @keyframes logoPop {
   0% {
