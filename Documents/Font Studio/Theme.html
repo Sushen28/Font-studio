@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Theme Decor by Pola Events</title>
+  <link rel="stylesheet" href="Theme.css" />
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body>
+  <!-- ✨ Particle Background -->
+  <div id="particles-js"></div>
+
+  <!-- 🌟 Content Wrapper -->
+  
+
+    <!-- 🌸 Hero Section -->
+    <header class="hero fade-in">
+      <h1 class="brand-title"></h1>
+      <p class="brand-subtitle">
+    </header>
+
+    <!-- 💍 About Section -->
+    <section class="Theme-about fade-in">
+        <h2>About Our Theme Decor</h2>
+        <p>
+           <strong> At Pola Events, we specialize in curating stunning themed décors that reflect your unique story and style. Whether you dream of a floral wonderland or a glamorous Bollywood affair, our decor themes are designed to transform your celebration into a visual masterpiece. </strong>
+        </p>
+        <ul>
+          <li><strong>Floral: Immerse your event in fresh blooms, pastel palettes, and fragrant elegance with our signature floral decor.</strong></li>
+          <li><strong>Rustic:Earthy tones, wooden elements, and cozy charm come together in our rustic setups, perfect for open-air or barn-style weddings.</strong></li>
+          <li><strong>Bollywood: Lights, glam, and drama — our Bollywood theme brings vibrant colors and cinematic flair to your big day.</strong></li>
+          <li><strong>Traditional: Rooted in culture and rituals, this theme features ethnic patterns, royal elements, and timeless grace.</strong></li>
+          <li><strong>Minimal Chic: Clean lines, neutral tones, and subtle elegance define this theme, ideal for couples who love understated beauty.</strong></li>
+        </ul>
+      </section>
+      
+
+    <!-- 📸 Slideshow Section -->
+    <section class="slideshow fade-in">
+      <h2>Our Favorite Decors</h2>
+      <div class="slider">
+        <img class="slide" src="ThemeD1.jpeg" alt="Wedding Moment 1" height="600"width="900"/>
+        <img class="slide" src="ThemeD2.jpeg" alt="Wedding Moment 2" height="600"width="900"/>
+        <img class="slide" src="ThemeD3.jpeg" alt="Wedding Moment 3" height="600"width="900"/>
+        <img class="slide" src="ThemeD4.jpeg" alt="Wedding Moment 4" height="600"width="900"/>
+    
+      </div>
+    </section>
+  </div>
+
+  <!-- 🔄 Slideshow Script -->
+  <script>
+    let slideIndex = 0;
+    const slides = document.getElementsByClassName("slide");
+
+    function showSlides() {
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1; }
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 3000); // Change every 3 sec
+    }
+
+    window.onload = showSlides;
+  </script>
+
+  <!-- ✨ Particles Config -->
+  <script>
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 60 },
+        size: { value: 3 },
+        color: { value: "#ffffff" },
+        line_linked: {
+          enable: true,
+          color: "#ffffff"
+        },
+        move: {
+          speed: 1
+        }
+      }
+    });
+  </script>
+</body>
+</html>
