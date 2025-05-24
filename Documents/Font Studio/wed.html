@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weddings by Pola Events</title>
+  <link rel="stylesheet" href="Wedstyle.css" />
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body>
+  <!-- ✨ Particle Background -->
+  <div id="particles-js"></div>
+
+  <!-- 🌟 Content Wrapper -->
+  
+
+    <!-- 🌸 Hero Section -->
+    <header class="hero fade-in">
+      <h1 class="brand-title"></h1>
+      <p class="brand-subtitle">
+    </header>
+
+    <!-- 💍 About Section -->
+    <section class="wedding-about fade-in">
+      <h2>About Our Weddings</h2>
+      <p>
+        At <strong>Pola Events</strong>, we bring your wedding dreams to life with grace, elegance, and a touch of magic. Our services blend tradition with trend, delivering moments that are unforgettable.
+      </p>
+      <ul>
+        <li><strong>Mehendi:</strong> Bright, colorful, and joyful, our Mehendi events burst with music, floral decor, and artistic henna designs.</li>
+        <li><strong>Sangeet:</strong> A night of celebration filled with dance, laughter, and performances that reflect your story.</li>
+        <li><strong>Cocktail Party:</strong> Chic and sophisticated, this pre-wedding bash sets the mood with modern vibes and glam decor.</li>
+        <li><strong>Baraat:</strong> Energetic, grand, and fun-filled — we choreograph your entry with dhols, lights, and unstoppable beats.</li>
+        <li><strong>Reception:</strong> A classy finale to your wedding celebrations, styled with elegance, warmth, and personal touches.</li>
+      </ul>
+    </section>
+
+    <!-- 📸 Slideshow Section -->
+    <section class="slideshow fade-in">
+      <h2>Our Favorite Moments</h2>
+      <div class="slider">
+        <img class="slide" src="wed1.jpeg" alt="Wedding Moment 1" height="600"width="900"/>
+        <img class="slide" src="wed2.jpeg" alt="Wedding Moment 2" height="600"width="900"/>
+        <img class="slide" src="wed3.jpeg" alt="Wedding Moment 3" height="600"width="900"/>
+        <img class="slide" src="wed4.jpeg" alt="Wedding Moment 4" height="600"width="900"/>
+        <img class="slide" src="wed5.jpeg" alt="Wedding Moment 5"height="600"width="900"/>
+        <img class="slide" src="wed6.jpeg" alt="Wedding Moment 6"height="600"width="900" />
+      </div>
+    </section>
+  </div>
+
+  <!-- 🔄 Slideshow Script -->
+  <script>
+    let slideIndex = 0;
+    const slides = document.getElementsByClassName("slide");
+
+    function showSlides() {
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1; }
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 3000); // Change every 3 sec
+    }
+
+    window.onload = showSlides;
+  </script>
+
+  <!-- ✨ Particles Config -->
+  <script>
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 60 },
+        size: { value: 3 },
+        color: { value: "#ffffff" },
+        line_linked: {
+          enable: true,
+          color: "#ffffff"
+        },
+        move: {
+          speed: 1
+        }
+      }
+    });
+  </script>
+</body>
+</html>

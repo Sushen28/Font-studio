@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  background: transparent;
+  color: #f2f2f2;
+  overflow-x: hidden;
+}
+
+/* Background image */
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: url('PolaBG.mp4') no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Layout & Wrapper */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  line-height: 1.7;
+}
+
+main {
+  flex: 1;
+  padding: 4rem 1.5rem;
+}
+
+.wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 0 50px 0;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.brand-title {
+  font-size: 4rem;
+  font-weight: 800;
+  margin: 0;
+  color: #ffffff;
+  line-height: 1.2;
+}
+
+.brand-subtitle {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #dddddd;
+  margin-top: 5px;
+}
+
+.logo {
+  width: 100px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Section Styling */
+section {
+  margin-bottom: 50px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  color: #ffffff;
+  position: relative;
+}
+
+section h2::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #ffffff;
+  margin-top: 5px;
+  border-radius: 2px;
+}
+
+section p,
+section ul {
+  font-size: 1rem;
+  color: #FFFF33;
+}
+
+ul {
+  list-style: disc inside;
+  padding-left: 10px;
+}
+
+/* Floating Button */
+.floating-btn {
+  position: fixed;
+  top: 30px;
+  right: 20px;
+  z-index: 99;
+}
+
+.floating-btn a {
+  background: #FFFF33;
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.floating-btn a:hover {
+  background: #f2e500;
+}
+
+/* Links */
+a {
+  color: #FFFF33;
+  text-decoration: none;
+  border-bottom: 1px dashed transparent;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  border-bottom: 1px dashed #FFFF33;
+  color: #ffffff;
+}
+
+/* Footer */
+footer {
+  margin-top: 60px;
+  text-align: center;
+  color: #cccccc;
+  font-size: 0.9rem;
+}
+
+/* Fade-in animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 2.4rem;
+  }
+
+  .tagline {
+    font-size: 1rem;
+  }
+
+  .floating-btn a {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}

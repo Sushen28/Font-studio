@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Festivies by Pola Events</title>
+  <link rel="stylesheet" href="Festive.css" />
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <style>
+    /* Video Background Styling */
+    #bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      z-index: -3;
+      opacity: 0.55;
+    }
+
+    body, h1, h2, p, li, a {
+      color: #ffffff;
+      text-shadow: 0 2px 5px rgba(0,0,0,0.6);
+    }
+
+    .brand-title, .brand-subtitle {
+      color: #ffffff;
+    }
+
+    .insta-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .insta-link:hover {
+      color: #f5c518;
+    }
+
+    .floating-btn {
+      position: fixed;
+      top: 30px;
+      right: 20px;
+      z-index: 99;
+    }
+
+    .floating-btn a {
+      background: #FFFF33;
+      color: #000;
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: none;
+      transition: all 0.3s ease;
+    }
+
+    .floating-btn a:hover {
+      background: #f2e500;
+    }
+  </style>
+</head>
+<body>
+  <!-- 🎥 Video Background -->
+  <video id="bg-video" autoplay muted loop playsinline>
+    <source src="festive.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- ✨ Particle Background -->
+  <div id="particles-js"></div>
+
+  <!-- 🌟 Content Wrapper -->
+  <div class="wrapper">
+    <div class="floating-btn">
+      <a href="tel:812141178">📞 Get in Touch</a>
+    </div>
+
+    <header class="hero fade-in">
+      <img src="Pola events logo.jpg" alt="Pola Logo" class="logo" />
+      <h1 class="brand-title">Festive Fun</h1>
+      <p class="brand-subtitle">by Pola Events</p>
+    </header>
+
+    <main>
+        <section class="social fade-in">
+            <h2>Catch the Vibe</h2>
+            <ul>
+              <li><strong>Festive Celebrations:</strong> At Pola Events, we turn India’s most cherished festivals into breathtaking experiences. Whether it’s the vibrant colors of Holi, the devotion of Ganesh Utsav, or the sparkling lights of Diwali — we design every celebration with cultural richness, creative decor, and joyful energy that truly captures the spirit of the festival.</li>
+            </ul>
+          </section>
+          
+          <section class="services fade-in">
+            <h2>What We Offer</h2>
+            <ul>
+              <li><strong>Ganesh Utsav:</strong> Traditional décor, vibrant processions, dhols, and cultural performances to honor Lord Ganesha with grandeur.</li>
+              <li><strong>Holi Celebrations:</strong> Color blasts, rain dance setups, live DJs, and festive treats that turn your Holi into a riot of joy.</li>
+              <li><strong>Diwali Events:</strong> Elegant lighting, rangolis, fireworks, and festive entertainment to light up your night with warmth and sparkle.</li>
+              <li><strong>Navratri & Dussehra:</strong> Garba nights, folk dances, and thematic stages that celebrate the spirit of devotion and victory.</li>
+              <li><strong>Custom Festive Themes:</strong> From traditional to contemporary, we design unique experiences for any celebration you envision.</li>
+            </ul>
+          </section>
+          
+
+      <section class="social fade-in">
+        <h2>Catch the Vibe</h2>
+        <p>See the electrifying energy from our previous musical events and DJ nights on Instagram!</p>
+        <a href="https://www.instagram.com/pola_events/" target="_blank" class="insta-link">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Icon" class="insta-icon" width="30" height="30" />
+          @pola_events
+        </a>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 Created for <strong>Pola Events</strong> by <strong>Font– Design Studio.</strong> All rights reserved.</p>
+    </footer>
+  </div>
+
+  <!-- 🌀 Fade-In Animation -->
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = {
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px"
+    };
+    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+    faders.forEach(fader => {
+      appearOnScroll.observe(fader);
+    });
+  </script>
+
+  <!-- 🔷 Particles.js Config -->
+  <script>
+    particlesJS('particles-js', {
+      particles: {
+        number: {
+          value: 65,
+          density: { enable: true, value_area: 900 }
+        },
+        color: { value: "#4bd1c6" },
+        shape: { type: "circle" },
+        opacity: {
+          value: 0.35,
+          random: true
+        },
+        size: {
+          value: 2.5,
+          random: true
+        },
+        line_linked: {
+          enable: true,
+          distance: 140,
+          color: "#4bd1c6",
+          opacity: 0.2,
+          width: 1
+        },
+        move: {
+          enable: true,
+          speed: 1,
+          direction: "none",
+          out_mode: "out"
+        }
+      },
+      interactivity: {
+        events: {
+          onhover: { enable: true, mode: "grab" },
+          resize: true
+        },
+        modes: {
+          grab: {
+            distance: 180,
+            line_linked: { opacity: 0.35 }
+          }
+        }
+      },
+      retina_detect: true
+    });
+  </script>
+</body>
+</html>
